@@ -12,6 +12,7 @@
         <module>hello-world</module>
         <module>array-init</module>
         <module>basic-calculator</module>
+        <module>interface-generation</module>
     </modules>
 
     <properties>
