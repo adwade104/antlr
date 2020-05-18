@@ -11,7 +11,7 @@
     <modules>
         <module>hello-world</module>
         <module>array-init</module>
-        <module>calculator</module>
+        <module>basic-calculator</module>
     </modules>
 
     <properties>
