@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>calculator</artifactId>
+    <artifactId>basic-calculator</artifactId>
 
     <dependencies>
         <dependency>
