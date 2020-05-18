@@ -26,7 +26,7 @@ public class Driver {
         CommonTokenStream tokenStream = new CommonTokenStream(lexer);
         HelloParser parser = new HelloParser(tokenStream);
         ParseTree tree = parser.r();
-        HelloVisitorImpl visitor = new HelloVisitorImpl();
+        HelloVisitor visitor = new HelloVisitor();
         return visitor.visit(tree);
     }
 
