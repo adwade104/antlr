@@ -1,6 +1,6 @@
 grammar Java;
 
-// starting point for parsing a java file
+// starting point for parsing a java file (Works for language level up to Java 1.7)
 compilationUnit
     :   packageDeclaration? importDeclaration* typeDeclaration* EOF
     ;
@@ -962,13 +962,15 @@ ELLIPSIS : '...';
 // Whitespace and comments
 //
 
-WS  :  [ \t\r\n\u000C]+ -> skip
+LINE_COMMENT
+    : '//' ~[\r\n]* '\r'? '\n' -> channel(HIDDEN)
     ;
 
 COMMENT
-    :   '/*' .*? '*/' -> skip
+    :   '/*' .*? '*/' -> channel(HIDDEN)
     ;
 
-LINE_COMMENT
-    :   '//' ~[\r\n]* -> skip
+WS  :   [ \r\t\u000C\n]+ -> channel(HIDDEN)
     ;
+
+
