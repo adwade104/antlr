@@ -3,7 +3,7 @@ package com.wade.adam.antlr;
 import grammars.HelloBaseVisitor;
 import grammars.HelloParser;
 
-public class HelloVisitorImpl extends HelloBaseVisitor<String> {
+public class HelloVisitor extends HelloBaseVisitor<String> {
 
     @Override
     public String visitR(HelloParser.RContext ctx){
